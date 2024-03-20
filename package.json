@@ -1,0 +1,25 @@
+{
+  "name": "leena-language-support",
+  "displayName": "Leena Language Support",
+  "description": "Syntax and grammar support for the Leena Programing Language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "lna",
+      "aliases": ["Leena", "lna"],
+      "extensions": [".lna .lnh"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "lna",
+      "scopeName": "source.lna",
+      "path": "./syntaxes/lna.tmLanguage.json"
+    }]
+  }
+}
