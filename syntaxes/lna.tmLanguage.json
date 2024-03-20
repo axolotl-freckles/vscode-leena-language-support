@@ -6,6 +6,12 @@
 			"include": "#keywords"
 		},
 		{
+			"include": "#operators"
+		},
+		{
+			"include": "#comments"
+		},
+		{
 			"include": "#strings"
 		}
 	],
@@ -13,8 +19,25 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.lna",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(if|while|for|return|fork)\\b"
 			}]
+		},
+		"operators": {
+			"patterns": [{
+				"name": "keyword.operator.assign.lna",
+				"match": ":="
+			}]
+		},
+		"booloperators": {
+			"patterns": [{
+				"name": "keyword.operator.comparison.lna",
+				"match": "\\b(=?|!=|<|<=|>|>=|or|and|&&)\\b"
+			}]
+		},
+		"comments" : {
+			"name": "comment.block.lna",
+			"begin": "\\/\\*",
+			"end": "\\*\\/"
 		},
 		"strings": {
 			"name": "string.quoted.double.lna",
